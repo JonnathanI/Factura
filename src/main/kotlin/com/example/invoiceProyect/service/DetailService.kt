@@ -1,7 +1,7 @@
-package com.example.factura.service
+package com.example.invoiceProyect.service
 
-import com.example.factura.model.Detail
-import com.example.factura.repository.DetailRepository
+import com.example.invoiceProyect.model.Detail
+import com.example.invoiceProyect.repository.DetailRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service

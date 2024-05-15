@@ -1,10 +1,7 @@
-package com.example.factura.controller
+package com.example.invoiceProyect.controller
 
-import com.example.factura.model.Client
-import com.example.factura.model.Invoice
-import com.example.factura.repository.ClientRepository
-import com.example.factura.service.ClientService
-import com.example.factura.service.InvoiceService
+import com.example.invoiceProyect.model.Invoice
+import com.example.invoiceProyect.service.InvoiceService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity

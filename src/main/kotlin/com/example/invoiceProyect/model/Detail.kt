@@ -1,4 +1,4 @@
-package com.example.factura.model
+package com.example.invoiceProyect.model
 
 import jakarta.persistence.*
 import java.math.BigDecimal
@@ -13,10 +13,12 @@ class Detail {
     var quantity: Int = 0
     @Column(name = "price", precision = 10 , scale = 2)
     var price: BigDecimal? = null
+    @Column(name = "subtotal", precision = 10, scale = 2)
+    var subTotal: BigDecimal? = null
     @Column(name = "invoice_id")
-    var invoiceId: String? = null
+    var invoiceId: Long? = null
     @Column(name = "product_id")
-    var productId: String? = null
+    var productId: Long? = null
 
 
 }

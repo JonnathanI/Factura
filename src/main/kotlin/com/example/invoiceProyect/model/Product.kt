@@ -1,4 +1,4 @@
-package com.example.factura.model
+package com.example.invoiceProyect.model
 
 import jakarta.persistence.*
 
@@ -12,5 +12,5 @@ class Product {
     var description: String? = null
     var brand: String? = null
     var price: Double? = null
-    var stock: Int? = null
+    var stock: Long? = null
 }

@@ -1,7 +1,7 @@
-package com.example.factura.repository
+package com.example.invoiceProyect.repository
 
 
-import com.example.factura.model.Invoice
+import com.example.invoiceProyect.model.Invoice
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
