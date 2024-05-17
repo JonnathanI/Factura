@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS product (
 
 CREATE TABLE IF NOT EXISTS invoice (
        id SERIAL PRIMARY KEY,
-       code VARCHAR(17) UNIQUE NOT NULL ,
+       code VARCHAR(17) NOT NULL ,
        create_at DATE NOT NULL ,
        total DECIMAL(10, 2),
        client_id INT,

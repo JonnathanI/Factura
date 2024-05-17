@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*
 class ClientController {
     @Autowired
     lateinit var clientService: ClientService
+
     @GetMapping
     fun list(): List<Client> {
     return clientService.list()
