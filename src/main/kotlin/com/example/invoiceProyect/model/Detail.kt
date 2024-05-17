@@ -11,14 +11,11 @@ class Detail {
     @Column(updatable = false)
     var id: Long? = null
     var quantity: Int = 0
-    @Column(name = "price", precision = 10 , scale = 2)
-    var price: BigDecimal? = null
-    @Column(name = "subtotal", precision = 10, scale = 2)
-    var subTotal: BigDecimal? = null
+    var price: Double? = null
+    @Column(name = "subtotal")
+    var subTotal: Double? = null
     @Column(name = "invoice_id")
     var invoiceId: Long? = null
     @Column(name = "product_id")
     var productId: Long? = null
-
-
 }
