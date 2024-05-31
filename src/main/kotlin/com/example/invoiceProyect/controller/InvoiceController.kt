@@ -12,6 +12,12 @@ import org.springframework.web.bind.annotation.*
 class InvoiceController {
     @Autowired
     lateinit var invoiceService: InvoiceService
+
+    @GetMapping("/{value}/get-total")
+    fun getTotal(@PathVariable value : Double): List<Invoice> {
+        return invoiceService.getTotal(value)
+    }
+
     @GetMapping
     fun list(): List<Invoice> {
     return invoiceService.list()

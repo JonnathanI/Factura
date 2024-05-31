@@ -13,10 +13,14 @@ class ClientController {
     @Autowired
     lateinit var clientService: ClientService
 
+
+
     @GetMapping
     fun list(): List<Client> {
     return clientService.list()
     }
+
+
 
     @PostMapping
     fun save(@RequestBody client: Client): Client {
