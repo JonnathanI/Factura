@@ -3,7 +3,7 @@ package com.example.invoiceProyect.model
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "client")
+    @Table(name = "client")
 class Client {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
