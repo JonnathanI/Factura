@@ -1,6 +1,7 @@
 package com.example.invoiceProyect.controller
 
 import com.example.invoiceProyect.model.Invoice
+import com.example.invoiceProyect.model.InvoiceView
 import com.example.invoiceProyect.service.InvoiceService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
@@ -13,14 +14,21 @@ class InvoiceController {
     @Autowired
     lateinit var invoiceService: InvoiceService
 
+
     @GetMapping("/{value}/get-total")
     fun getTotal(@PathVariable value : Double): List<Invoice> {
         return invoiceService.getTotal(value)
     }
 
+
     @GetMapping
     fun list(): List<Invoice> {
     return invoiceService.list()
+    }
+
+    @GetMapping("/with-client")
+    fun listInvoice(): List<InvoiceView> {
+        return invoiceService.listView()
     }
 
     @PostMapping

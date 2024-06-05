@@ -1,7 +1,9 @@
 package com.example.invoiceProyect.service
 
 import com.example.invoiceProyect.model.Invoice
+import com.example.invoiceProyect.model.InvoiceView
 import com.example.invoiceProyect.repository.InvoiceRepository
+import com.example.invoiceProyect.repository.InvoiceViewRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
@@ -12,12 +14,20 @@ class InvoiceService {
     @Autowired
     lateinit var invoiceRepository: InvoiceRepository
 
+    @Autowired
+    lateinit var  invoiceViewRepository: InvoiceViewRepository
+
+
     fun getTotal(value:Double): List<Invoice> {
         return invoiceRepository.optenerTotal(value)
     }
 
     fun list(): List<Invoice> {
         return invoiceRepository.findAll()
+    }
+
+    fun listView(): List<InvoiceView> {
+        return invoiceViewRepository.findAll()
     }
 
     fun save(invoice: Invoice): Invoice {
