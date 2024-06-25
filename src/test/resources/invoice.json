@@ -1,0 +1,4 @@
+
+val jsonString = File("./src/test/resources/invoice.json").readText(Charsets.UTF_8)
+
+val invoiceMock = Gson().fromJson(jsonString, Invoice::class.java)
