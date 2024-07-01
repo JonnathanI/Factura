@@ -17,6 +17,7 @@ class ClientService {
     }
 
     fun save(client: Client): Client {
+
         return clientRepository.save(client)
     }
 
@@ -54,5 +55,24 @@ class ClientService {
             throw ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error al eliminar el cliente", ex)
         }
     }
+
+    fun validarNui(nui:String?): Boolean? {
+        if (nui.isNullOrBlank()) {
+            return false
+        }
+
+        // Ejemplo de una regla básica de validación: longitud y solo números
+        val nuiRegex = Regex("^[0-9]{10}$")
+        if (!nuiRegex.matches(nui)) {
+            return false
+        }
+
+        // Aquí puedes agregar otras validaciones según tus necesidades
+        // Por ejemplo, validar un dígito verificador
+
+        return true
+    }
+
+
 
 }
