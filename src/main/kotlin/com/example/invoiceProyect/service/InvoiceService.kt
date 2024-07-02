@@ -69,4 +69,16 @@ class InvoiceService {
         }
     }
 
+    fun isValidInvoiceCode(code: String): Boolean {
+        if (code.isNullOrBlank()) {
+            return false
+        }
+        val regex = Regex("^\\d{3}-\\d{3}-\\d{9}\$")
+        if (!regex.matches(code)) {
+            return false
+        }
+
+        return true
+    }
+
 }
