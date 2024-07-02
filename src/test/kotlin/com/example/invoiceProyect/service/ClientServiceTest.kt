@@ -1,12 +1,9 @@
 package com.example.invoiceProyect.service
 
 import com.example.invoiceProyect.model.Client
-import com.example.invoiceProyect.model.Invoice
 import com.example.invoiceProyect.repository.ClientRepository
 import com.google.gson.Gson
 import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.Test
 import org.mockito.InjectMocks
 import org.mockito.Mock
